@@ -11,6 +11,7 @@ Ce projet illustre un processus complet de **Business Intelligence**, depuis l�
 - Génération de rapports interactifs via **JasperReport**.
 
 ## Structure du projet
+```bash
 pygramETL/
 ├── data/
 │ ├── customers.csv
@@ -21,7 +22,7 @@ pygramETL/
 │ └── main.py
 |── customer_schema.xml
 └── README.md
-
+```
 ## Prérequis
 
 - Python 3.x  
