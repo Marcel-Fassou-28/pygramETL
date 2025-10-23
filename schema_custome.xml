@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Schema name="CustomerSchema">
+    <Cube name="CustomerFact">
+        <Table name="fact_custome"/>
+        
+        <!-- Dimensions -->
+        <Dimension name="Customer">
+            <Hierarchy hasAll="true" allMemberName="All Customers">
+                <Level name="CustomerName" column="CustomerName" uniqueMembers="true"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="State">
+            <Hierarchy hasAll="true" allMemberName="All States">
+                <Level name="State_Name" column="State_Name" uniqueMembers="true"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="DateInscription">
+            <Hierarchy hasAll="true" allMemberName="All Dates">
+                <Level name="tempsInsc" column="tempsInsc" uniqueMembers="true"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="PriorityOrOther">
+            <Hierarchy hasAll="true" allMemberName="All id2">
+                <Level name="id2" column="id2" uniqueMembers="true"/>
+            </Hierarchy>
+        </Dimension>
+
+        <!-- Measures -->
+        <Measure name="SUM1" column="SUM1" aggregator="sum" formatString="Standard"/>
+        <Measure name="SUM2" column="SUM2" aggregator="sum" formatString="Standard"/>
+        <Measure name="TotalSUM" column="TotalSUM" aggregator="sum" formatString="Standard"/>
+        <Measure name="AverageSUM" column="AverageSUM" aggregator="avg" formatString="Standard"/>
+    </Cube>
+</Schema>
